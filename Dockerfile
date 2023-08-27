@@ -1,8 +1,4 @@
-# pull the official docker image
-FROM python:3.11.1-slim
-
-# set work directory
-WORKDIR /app
+FROM tiangolo/uvicorn-gunicorn:python3.11-slim
 
 # set env variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -13,4 +9,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
-COPY . .
+COPY ./app /app/

@@ -1,3 +1,14 @@
+
+```sh
+$ docker network create traefik-public
+$ docker-compose -f docker-compose.traefik.yml up -d
+# dev
+$ docker-compose -f docker-compose.yml up -d
+# prod
+$ docker-compose -f docker-compose.prod.yml up -d
+```
+
+
 # Dockerizing FastAPI with Postgres, Uvicorn, and Traefik
 
 ## Want to learn how to build this?
