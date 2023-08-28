@@ -7,6 +7,8 @@ services:
       - 80:80
       # Listen on port 443, default for HTTPS
       - 443:443
+      # Listen on port 8080, insecure Dashboard
+      - 8080:8080
     restart: always
     volumes:
       # Add Docker as a mounted volume, so that Traefik can read the labels of other services
