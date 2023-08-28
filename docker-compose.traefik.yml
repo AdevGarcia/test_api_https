@@ -2,9 +2,11 @@ services:
 
   traefik:
     image: traefik:v2.10.4
+    container_name: traefik
     ports:
       # Listen on port 80, default for HTTP, necessary to redirect to HTTPS
       - 80:80
+      - 8080:8080
     restart: always
     volumes:
       # Add Docker as a mounted volume, so that Traefik can read the labels of other services
@@ -20,6 +22,8 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
+      # Dashboard
+      - --api.insecure # Don't do that in production# 
     networks:
       - traefik-public
 
