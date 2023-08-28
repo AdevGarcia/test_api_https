@@ -32,6 +32,8 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
+      # Dashboard
+      - --api.insecure # Don't do that in production# 
     networks:
       - traefik-public
 

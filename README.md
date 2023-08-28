@@ -4,7 +4,10 @@ $ docker network create traefik-public
 $ docker-compose -f docker-compose.traefik.yml up -d
 # dev
 $ docker-compose -f docker-compose.yml up -d
+
 # prod
+$ docker network create traefik-public
+$ docker-compose -f docker-compose.traefik.prod.yml up -d
 $ docker-compose -f docker-compose.prod.yml up -d
 ```
 
